@@ -1,0 +1,49 @@
+---
+/**
+ * Header Component
+ * BMAD-CORE: Navigation and branding
+ */
+import { SITE_CONFIG } from '@/core/config/site.config';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+  <nav class="container">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <svg class="h-8 w-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        <span class="text-xl font-bold text-gray-900">{SITE_CONFIG.name}</span>
+      </a>
+
+      <!-- Navigation -->
+      <ul class="flex items-center space-x-6">
+        {SITE_CONFIG.navigation.main.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                'text-sm font-medium transition-colors hover:text-primary-600',
+                currentPath === item.href
+                  ? 'text-primary-600'
+                  : 'text-gray-600'
+              ]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA -->
+      <div class="flex items-center space-x-4">
+        <a href="/docs" class="btn-primary">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

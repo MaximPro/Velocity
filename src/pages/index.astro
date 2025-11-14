@@ -1,0 +1,125 @@
+---
+/**
+ * Homepage
+ * BMAD-CORE: Landing page with hero and features
+ */
+import MainLayout from '@/layouts/MainLayout.astro';
+import Hero from '@/components/ui/Hero.astro';
+import FeatureCard from '@/components/ui/FeatureCard.astro';
+import Card from '@/components/ui/Card.astro';
+---
+
+<MainLayout
+  title="Velocity - Astro BMAD Stack"
+  description="Optimized Astro Stack with BMAD-METHOD Philosophy for easy and effective website creation"
+>
+  <Hero
+    title="Build Websites with Velocity"
+    subtitle="Optimized Astro Stack inspired by BMAD-METHOD. Create fast, modern websites with ease."
+    cta={{
+      text: 'Get Started',
+      href: '/docs'
+    }}
+    secondaryCta={{
+      text: 'View on GitHub',
+      href: 'https://github.com/MaximPro/Velocity'
+    }}
+  />
+
+  <!-- Features Section -->
+  <section class="py-20">
+    <div class="container">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold text-gray-900">C.O.R.E. Philosophy</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          Built on BMAD-METHOD principles for optimal development
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <FeatureCard
+          icon="🤝"
+          title="Collaboration"
+          description="Structured for team collaboration and scalable development workflows"
+        />
+        <FeatureCard
+          icon="⚡"
+          title="Optimized"
+          description="Pre-configured with performance best practices and modern tooling"
+        />
+        <FeatureCard
+          icon="🔄"
+          title="Reflection"
+          description="Clear architecture that encourages thoughtful development decisions"
+        />
+        <FeatureCard
+          icon="🚀"
+          title="Engine"
+          description="Complete framework with TypeScript, Tailwind, and React integration"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="bg-gray-50 py-20">
+    <div class="container">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold text-gray-900">Modern Tech Stack</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          Everything you need to build fast, modern websites
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <Card title="Astro 4">
+          <p class="text-gray-600">
+            Lightning-fast static site generator with island architecture
+          </p>
+        </Card>
+        <Card title="TypeScript">
+          <p class="text-gray-600">
+            Type-safe development with full TypeScript support
+          </p>
+        </Card>
+        <Card title="Tailwind CSS">
+          <p class="text-gray-600">
+            Utility-first CSS framework for rapid UI development
+          </p>
+        </Card>
+        <Card title="React Integration">
+          <p class="text-gray-600">
+            Use React components where you need interactivity
+          </p>
+        </Card>
+        <Card title="Optimized DX">
+          <p class="text-gray-600">
+            ESLint, Prettier, and dev tools pre-configured
+          </p>
+        </Card>
+        <Card title="Ready to Deploy">
+          <p class="text-gray-600">
+            Optimized build output ready for any hosting platform
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20">
+    <div class="container">
+      <div class="mx-auto max-w-2xl rounded-2xl bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-12 text-center text-white shadow-xl">
+        <h2 class="text-3xl font-bold">Ready to Build?</h2>
+        <p class="mt-4 text-lg text-primary-100">
+          Start creating amazing websites with Velocity today
+        </p>
+        <div class="mt-8">
+          <a href="/docs" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-primary-600 font-semibold hover:bg-gray-50 transition-colors">
+            Read the Docs
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,41 @@
+{
+  "name": "velocity-astro-bmad",
+  "version": "1.0.0",
+  "description": "Optimized Astro Stack with BMAD-METHOD Philosophy - Easy & Effective Website Creation",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.ts,.astro"
+  },
+  "dependencies": {
+    "astro": "^4.15.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/react": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.6.2",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "eslint": "^9.11.0",
+    "eslint-plugin-astro": "^1.2.4"
+  },
+  "keywords": [
+    "astro",
+    "bmad-method",
+    "website-builder",
+    "typescript",
+    "tailwind"
+  ],
+  "author": "MaximPro",
+  "license": "MIT"
+}

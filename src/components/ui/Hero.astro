@@ -1,0 +1,56 @@
+---
+/**
+ * Hero Component
+ * BMAD-CORE: Eye-catching hero section
+ */
+interface Props {
+  title: string;
+  subtitle?: string;
+  cta?: {
+    text: string;
+    href: string;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+  };
+}
+
+const { title, subtitle, cta, secondaryCta } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-primary-50 to-white py-20 sm:py-32">
+  <div class="container">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        {title}
+      </h1>
+      {subtitle && (
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          {subtitle}
+        </p>
+      )}
+      {(cta || secondaryCta) && (
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          {cta && (
+            <a href={cta.href} class="btn-primary">
+              {cta.text}
+            </a>
+          )}
+          {secondaryCta && (
+            <a href={secondaryCta.href} class="btn-secondary">
+              {secondaryCta.text}
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Decorative element -->
+  <div class="absolute inset-0 -z-10">
+    <svg class="absolute right-0 top-0 h-96 w-96 translate-x-1/2 opacity-10" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+    </svg>
+  </div>
+</section>

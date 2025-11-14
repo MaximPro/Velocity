@@ -1,0 +1,160 @@
+---
+/**
+ * Documentation Page
+ * BMAD-CORE: Quick start guide and documentation
+ */
+import MainLayout from '@/layouts/MainLayout.astro';
+import Card from '@/components/ui/Card.astro';
+---
+
+<MainLayout
+  title="Documentation"
+  description="Learn how to use Velocity for your next project"
+>
+  <div class="py-20">
+    <div class="container">
+      <div class="mx-auto max-w-3xl">
+        <h1 class="text-4xl font-bold text-gray-900">Documentation</h1>
+
+        <div class="prose prose-lg mt-8">
+          <h2>Quick Start</h2>
+
+          <h3>Installation</h3>
+          <pre class="rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code># Clone the repository
+git clone https://github.com/MaximPro/Velocity.git my-project
+
+# Navigate to the project
+cd my-project
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev</code></pre>
+
+          <h3>Project Structure</h3>
+          <p>
+            Velocity follows a structured approach inspired by BMAD-METHOD:
+          </p>
+
+          <ul>
+            <li><strong>components/core/</strong> - Essential components like SEO, analytics</li>
+            <li><strong>components/ui/</strong> - Reusable UI components</li>
+            <li><strong>components/layout/</strong> - Layout components (Header, Footer)</li>
+            <li><strong>layouts/</strong> - Page layout templates</li>
+            <li><strong>pages/</strong> - File-based routing pages</li>
+            <li><strong>core/config/</strong> - Site configuration</li>
+            <li><strong>core/utils/</strong> - Utility functions</li>
+            <li><strong>core/types/</strong> - TypeScript type definitions</li>
+          </ul>
+
+          <h3>Configuration</h3>
+          <p>
+            Update your site configuration in <code>src/core/config/site.config.ts</code>:
+          </p>
+
+          <pre class="rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code>export const SITE_CONFIG = {
+  name: 'Your Site Name',
+  title: 'Your Site Title',
+  description: 'Your site description',
+  author: 'Your Name',
+  url: 'https://yoursite.com',
+  // ... more config
+};</code></pre>
+
+          <h3>Creating Pages</h3>
+          <p>
+            Create new pages in the <code>src/pages/</code> directory:
+          </p>
+
+          <pre class="rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code>---
+import MainLayout from '@/layouts/MainLayout.astro';
+---
+
+&lt;MainLayout title="My Page"&gt;
+  &lt;div class="container py-20"&gt;
+    &lt;h1&gt;My Page&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/MainLayout&gt;</code></pre>
+
+          <h3>Using Components</h3>
+          <p>
+            Import and use pre-built components:
+          </p>
+
+          <pre class="rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code>---
+import Hero from '@/components/ui/Hero.astro';
+import Card from '@/components/ui/Card.astro';
+---
+
+&lt;Hero
+  title="Welcome"
+  subtitle="Get started quickly"
+  cta={{ text: 'Learn More', href: '/about' }}
+/&gt;
+
+&lt;Card title="Feature"&gt;
+  &lt;p&gt;Feature description&lt;/p&gt;
+&lt;/Card&gt;</code></pre>
+
+          <h3>Styling</h3>
+          <p>
+            Velocity uses Tailwind CSS for styling. Use utility classes directly:
+          </p>
+
+          <pre class="rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code>&lt;div class="container mx-auto px-4"&gt;
+  &lt;h1 class="text-4xl font-bold text-gray-900"&gt;
+    Heading
+  &lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3>Building for Production</h3>
+          <pre class="rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code># Build the project
+npm run build
+
+# Preview the build
+npm run preview</code></pre>
+
+          <h3>Deployment</h3>
+          <p>
+            Deploy to your favorite platform:
+          </p>
+          <ul>
+            <li>Vercel: Connect your repository and deploy automatically</li>
+            <li>Netlify: Drag and drop the <code>dist/</code> folder</li>
+            <li>GitHub Pages: Use the Astro GitHub Pages action</li>
+            <li>Any static host: Upload the <code>dist/</code> folder</li>
+          </ul>
+
+          <h2>Available Scripts</h2>
+          <div class="not-prose grid gap-4 md:grid-cols-2">
+            <Card>
+              <code class="text-sm">npm run dev</code>
+              <p class="mt-2 text-sm text-gray-600">Start development server</p>
+            </Card>
+            <Card>
+              <code class="text-sm">npm run build</code>
+              <p class="mt-2 text-sm text-gray-600">Build for production</p>
+            </Card>
+            <Card>
+              <code class="text-sm">npm run preview</code>
+              <p class="mt-2 text-sm text-gray-600">Preview production build</p>
+            </Card>
+            <Card>
+              <code class="text-sm">npm run format</code>
+              <p class="mt-2 text-sm text-gray-600">Format code with Prettier</p>
+            </Card>
+          </div>
+
+          <h2>Learn More</h2>
+          <ul>
+            <li><a href="https://docs.astro.build" target="_blank" rel="noopener">Astro Documentation</a></li>
+            <li><a href="https://tailwindcss.com/docs" target="_blank" rel="noopener">Tailwind CSS Documentation</a></li>
+            <li><a href="https://www.typescriptlang.org/docs" target="_blank" rel="noopener">TypeScript Documentation</a></li>
+            <li><a href="https://github.com/bmad-code-org/BMAD-METHOD" target="_blank" rel="noopener">BMAD-METHOD</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

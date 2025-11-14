@@ -1,0 +1,88 @@
+---
+/**
+ * About Page
+ * BMAD-CORE: Information about the stack
+ */
+import MainLayout from '@/layouts/MainLayout.astro';
+import Card from '@/components/ui/Card.astro';
+---
+
+<MainLayout
+  title="About"
+  description="Learn about Velocity and the BMAD-METHOD philosophy"
+>
+  <div class="py-20">
+    <div class="container">
+      <div class="mx-auto max-w-3xl">
+        <h1 class="text-4xl font-bold text-gray-900">About Velocity</h1>
+
+        <div class="prose prose-lg mt-8 text-gray-600">
+          <p>
+            Velocity is an optimized Astro stack inspired by the <strong>BMAD-METHOD</strong>
+            philosophy - a framework designed for effective collaboration between developers
+            and modern development practices.
+          </p>
+
+          <h2 class="mt-12 text-2xl font-bold text-gray-900">The C.O.R.E. Philosophy</h2>
+
+          <div class="not-prose mt-6 grid gap-6 md:grid-cols-2">
+            <Card title="Collaboration">
+              <p class="text-gray-600">
+                Structured project organization that makes team collaboration seamless
+                and scalable across projects of any size.
+              </p>
+            </Card>
+
+            <Card title="Optimized">
+              <p class="text-gray-600">
+                Pre-configured with performance best practices, modern tooling, and
+                battle-tested patterns for maximum efficiency.
+              </p>
+            </Card>
+
+            <Card title="Reflection">
+              <p class="text-gray-600">
+                Clear, intentional architecture that encourages thoughtful development
+                decisions and maintainable code.
+              </p>
+            </Card>
+
+            <Card title="Engine">
+              <p class="text-gray-600">
+                Complete development framework with TypeScript, Tailwind CSS, React,
+                and essential dev tools ready to go.
+              </p>
+            </Card>
+          </div>
+
+          <h2 class="mt-12 text-2xl font-bold text-gray-900">Why Astro?</h2>
+          <p>
+            Astro provides the perfect foundation for this stack with its island architecture,
+            excellent performance characteristics, and flexibility to integrate with your
+            favorite UI frameworks when needed.
+          </p>
+
+          <h2 class="mt-12 text-2xl font-bold text-gray-900">Project Structure</h2>
+          <pre class="mt-4 rounded-lg bg-gray-900 p-4 text-sm text-gray-100"><code>src/
+├── components/
+│   ├── core/        # Core components (SEO, etc.)
+│   ├── ui/          # UI components (Hero, Card, etc.)
+│   └── layout/      # Layout components (Header, Footer)
+├── layouts/         # Page layouts
+├── pages/           # Route pages
+├── styles/          # Global styles
+└── core/
+    ├── config/      # Configuration files
+    ├── utils/       # Utility functions
+    └── types/       # TypeScript types</code></pre>
+
+          <h2 class="mt-12 text-2xl font-bold text-gray-900">Get Started</h2>
+          <p>
+            Check out the <a href="/docs" class="text-primary-600 hover:text-primary-700">documentation</a>
+            to learn how to use Velocity for your next project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
